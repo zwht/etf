@@ -1,0 +1,85 @@
+*, :after, :before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0}
+html {height: 100%;width: 100%;font-size: 14px; }
+body {font-family: 'Microsoft YaHei', Verdana, Arial, Helvetica, sans-serif;height: 100%;width: 100%;
+  overflow-y: auto;overflow-x: hidden;margin: 0;line-height: 1.42857143;color: #fff;}
+ul { list-style-type: none; margin: 0; padding: 0 }
+h1, h2, h3, h4, h5, h6, li, p { margin: 0; padding: 0; font-size: 1em; font-style: normal; font-weight: normal }
+a,b,i,img{font-weight: normal; font-style: normal;display: inline-block}
+i{ font-style: normal}
+textarea{resize: none;}
+input,button,select,textarea{outline:none; font-size: 1em;cursor: pointer}
+input,textarea,button,select,input[type=radio]{outline:none}
+a, a:link, a:visited { color:#000; text-decoration: none }
+ul,li{ list-style-type: none; margin: 0; padding: 0 }
+
+.pull-right { float: right !important }
+.pull-left { float: left !important }
+.hide { display: none }
+.show { display: block}
+.clear { overflow:auto;zoom:1;clear: both}
+.clear2{clear: both}
+.clear:after,.clear2:after { content: " "; height: 0; width: 0; visibility: hidden;
+  display: block; clear: both }
+
+.overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.text-center{ text-align: center}
+.text-left{ text-align: left}
+.text-right{ text-align: right;}
+.middle{ display: table;}
+.middle>div{ display: table-cell; vertical-align: middle;}
+.no-select{-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.disabled {pointer-events: none; opacity: 0.3; cursor: not-allowed; }
+.overflowAuto{overflow-y: auto;}
+.overflowAuto::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.overflowAuto::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 10px;
+  background-color: #777;
+}
+.overflowAuto::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+  /*border-radius: 10px;*/
+  background: #f1f1f1;
+}
+
+body,html{ margin: 0; padding: 0; background: #242223; color: #fff;}
+
+
+.heade{ width: 1200px; margin: 0 auto; height: 140px; padding-top: 27px;
+  padding-left:75px; 
+}
+
+.news img,.bar img{ width: 100%;}
+.news{position: relative;}
+.news ul{ width: 980px;position: absolute; top:20px; bottom: 20px;
+   left: 50%; margin-left: -490px; 
+  
+}
+
+.js{ color: #fff; text-align: center; padding-bottom: 70px;}
+.js h2{ font-size: 24px; width: 890px; margin: 0 auto 40px; 
+  border-bottom: 2px solid #363636; padding: 80px 0 40px;
+}
+.js p{ font-size: 14px; line-height: 35px;}
+.bt{ position: relative; width: 980px; margin: 0 auto; padding: 80px 0;}
+.bt .item{ padding: 10px 0; }
+.bt .item a{ margin-left: 30px; color: #fff; cursor: pointer;}
+.bt .item a:hover{ color: #aaa; }
+.bt .item a,.bt .item img{ vertical-align: middle;}
+.bt .log{ position: absolute; right: 0; top:50%; margin-top: -113px;}
+
+
+.fd{ background: #000; font-size: 10px;
+   color: #fff; text-align: center; 
+   line-height: 24px;}
+
+.content{ min-height: 600px; background: #000; color: #fff;
+  padding: 50px 0;
+  
+}
+.content>div{width: 890px; margin: 0 auto;}
+.content .time{ text-align: center; padding-bottom: 40px;}
+.content h1{ font-size: 30px; text-align: center; padding-bottom: 10px;}
+.content .noData{ text-align: center;}

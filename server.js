@@ -16,7 +16,7 @@ app.set('port', (process.env.PORT || 11111));
 
 // 设置代理
 app.use('/v1', proxy({
-	target: "http://192.168.55.115:18083/",
+	target: "http://192.168.101.62:9080",
 	secure: false
 }));
 app.use('/rest', proxy({

@@ -7,13 +7,95 @@
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
   <div class="heade">
-    hh
+    <img src="assets/images/etf_03.png" alt="">
   </div>
+  <div class="bar">
+    <img src="assets/images/etf_06.jpg" alt="">
+  </div>
+  <div class="js">
+    <h2>使命</h2>
+    <p>Fusiongrid基金会的核心使命是构建可持续发展的商业和技术生态,</p>
+    <p>重点支持与推广Fusionblock技术的研究、开发和应用，以及维护、发展其价值生态体系。</p>
+    <h2>介绍</h2>
+    <p>Fusionblock通过独创的网格化智能工作流为大数据生态提供统一、高效的数据分析服务及复杂业务流程支持，</p>
+    <p> 个人、企业、政府机构不仅能够通过平台获取到数据，还能利用平台的计算能力进行数据分析，</p>
+    <p>从而完成数据价值流转，支持全产业链条的数据应用和服务生态。</p>
+    <h2>重点领域</h2>
+    <p>我们支持和帮助Fusionblock社区成长，建立社区自治体系，规范自治社区行为。</p>
+    <p>并致力于维护和扩大Fusionblock的生态系统。在促进Fusionblock成为商业实体的平台的基础上，</p>
+    <p>为对Fusionblock有兴趣的企业提供客观咨询。</p>
+    <p>另外，我们会主动接触政府和监管机构，与商业，企业和其他开源项目组成战略合作伙伴关系。</p>
+  </div>
+  <div class="news">
+    <img src="assets/images/etf_08.jpg" alt="">
+    <ul class="overflowAuto">
+      <li></li>
+    </ul>
+  </div>
+  <div class="bt">
+    <div class="item">
+      <img src="assets/images/etf_11.png" alt="">
+      <a>Fusiongrid</a>
+    </div>
+    <div class="item">
+      <img src="assets/images/etf_17.png" alt="">
+      <a>Fusiongrid</a>
+    </div>
+    <div class="item">
+      <img src="assets/images/etf_20.png" alt="">
+      <a>Fusiongrid_io</a>
+    </div>
+    <div class="item">
+      <img src="assets/images/etf_24.png" alt="">
+      <a> Fusiongrid@163.com</a>
+    </div>
+    <img src="assets/images/etf_14.png" alt="" class="log" />
+  </div>
+  <div class="fd">
+    Copyright 2018 Fusiongrid Foundation. All Rights Reserved
+  </div>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script>
+    $(function () {
+      getData()
+    })
+
+    function getData() {
+      //3304782513569792
+      $.ajax({
+        type: 'POST',
+        url: '/v1/news/list/1/100',
+        data: JSON.stringify({state: 1, languageType: 201}),
+        contentType: 'application/json',
+        success: function (result) {
+          if (result.errorCode == 0) {
+            var data=result.data.pageData;
+            $('ul').html("");
+
+            for(i=0;i<data.length;i++){
+              var item=data[i]
+              var li=$('<li class="overflow"><span>'+item.title+'</span><b>'+getDate(item.createTime)+'</b></li>')
+              li.click(item,function(event){
+                window.open("/detile.html?id="+event.data.id)
+                //window.location.href="/detile.html?id="+event.data.id
+              },item)
+              $('ul').append(li)
+            }
+
+          } else {
+
+          }
+        }
+      })
+    }
+  </script>
 </body>
 
 </html>
