@@ -33,9 +33,12 @@
   </div>
   <div class="news">
     <img src="assets/images/etf_08.jpg" alt="">
-    <ul class="overflowAuto">
-      <li></li>
-    </ul>
+    <div class="ul">
+      <div class="tt">新闻&公告</div>
+      <ul class="overflowAuto">
+        <li></li>
+      </ul>
+    </div>
   </div>
   <div class="bt">
     <div class="item">
@@ -72,21 +75,27 @@
       $.ajax({
         type: 'POST',
         url: '/v1/news/list/1/100',
-        data: JSON.stringify({state: 1, languageType: 201}),
+        data: JSON.stringify({ state: 1, languageType: 201 }),
         contentType: 'application/json',
         success: function (result) {
           if (result.errorCode == 0) {
-            var data=result.data.pageData;
+            var data = result.data.pageData;
             $('ul').html("");
-
-            for(i=0;i<data.length;i++){
-              var item=data[i]
-              var li=$('<li class="overflow"><span>'+item.title+'</span><b>'+getDate(item.createTime)+'</b></li>')
-              li.click(item,function(event){
-                window.open("/detile.html?id="+event.data.id)
-                //window.location.href="/detile.html?id="+event.data.id
-              },item)
+            for (i = 0; i < data.length; i++) {
+              var item = data[i]
+              var li = $('<li>')
+              var h2 = $('<h2>')
+              var span = $('<span class="overflow">' + item.title + '</span>')
+              h2.append(span)
+              h2.append($('<b>' + getDate(item.createTime) + '</b>'))
+              li.append(h2)
+              li.append($('<p>' + item.summary + '</p>'))
               $('ul').append(li)
+              span.click(item, function (event) {
+                window.open("/detile.html?id=" + event.data.id)
+                //window.location.href="/detile.html?id="+event.data.id
+              }, item)
+              
             }
 
           } else {
