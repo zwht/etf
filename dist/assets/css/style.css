@@ -66,15 +66,15 @@ body,html{ margin: 0; padding: 0; background: #242223; color: #fff;}
   border-bottom: 1px solid #ededed;margin-bottom: 5px;}
 .news .ul{ width: 980px;position: absolute; top:20px; bottom: 20px;
   padding: 20px; padding-top: 60px; 
-   left: 50%; margin-left: -490px; background: rgba(255,255,255,1);
+   left: 50%; margin-left: -490px; background: rgba(255,255,255,0.98);
 }
 .news ul{ height:100%;}
-.news li{ padding: 10px 0;}
+.news li{ padding: 15px 0;}
 .news li h2{ text-align: center; position: relative; padding-bottom: 12px;}
 .news li h2 span{ display: inline-block; width: 600px; font-size: 20px;
   cursor: pointer; font-weight: bold;
 }
-.news li h2 span:hover{ color: rgb(26, 11, 236);}
+.news li h2 span:hover{ color: #00afcc;}
 .news li h2 b{ margin-left: 20px; position: absolute; 
   right: 20px; top:5px; color: #999;}
 .news li h2 b, .news li h2 span{ vertical-align: middle;}
@@ -104,8 +104,9 @@ body,html{ margin: 0; padding: 0; background: #242223; color: #fff;}
   
 }
 .content>div{width: 890px; margin: 0 auto;}
-.content .time{ text-align: center; padding-bottom: 40px;}
-.content h1{ font-size: 30px; text-align: center; padding-bottom: 10px;}
+.content .time{ text-align: center; padding-bottom: 40px; text-align: right;
+  color: #999;}
+.content h1{ font-size: 30px; text-align: left; padding-bottom: 10px;}
 .content .noData{ text-align: center;}
 .content .cont img{ max-width: 100%; text-align: center;}
 .content .cont p{ margin: 15px 0; line-height: 1.8em;
