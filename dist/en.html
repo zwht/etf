@@ -6,7 +6,7 @@
   <title>etf</title>
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -86,7 +86,7 @@
       $.ajax({
         type: 'POST',
         url: '/v1/news/list/1/100',
-        data: JSON.stringify({ state: 1, languageType: 201 }),
+        data: JSON.stringify({ state: 1, languageType: 202 }),
         contentType: 'application/json',
         success: function (result) {
           if (result.errorCode == 0) {
