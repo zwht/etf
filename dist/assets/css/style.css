@@ -48,8 +48,16 @@ body,html{ margin: 0; padding: 0; background: #242223; color: #fff;}
 
 
 .heade{ width: 1200px; margin: 0 auto; height: 140px; padding-top: 27px;
-  padding-left:75px; 
+  padding-left:75px; position: relative; 
 }
+.heade .zy{ position: absolute; right: 0; top: 60px;}
+.heade .zy a{ color: #aaa;}
+.heade .zy a:hover{ color: #fff;}
+.heade .zy span{ margin: 0 5px; color: #999;}
+
+.bar{ position: relative;}
+.bar h1{ position: absolute; width: 100%; top:50%; margin-top: -40px;
+   text-align: center; font-size: 40px; color: #fff;}
 
 .news img,.bar img{ width: 100%;}
 .news{position: relative; color: #64625e;}
@@ -89,7 +97,7 @@ body,html{ margin: 0; padding: 0; background: #242223; color: #fff;}
    color: #fff; text-align: center; 
    line-height: 24px;}
 
-.content{ min-height: 600px; background: #000; color: #fff;
+.content{ min-height: 600px; background: #191919; color: #fff;
   padding: 50px 0;
   
 }
